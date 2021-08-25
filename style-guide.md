@@ -11,15 +11,15 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Grayish blue: hsl(237, 18%, 59%)
-- Soft red: hsl(345, 95%, 68%)
+- Grayish blue: hsl(237, 18%, 59%) - text
+- Soft red: hsl(345, 95%, 68%) - text
 
 ### Neutral
 
-- White: hsl(0, 0%, 100%)
-- Dark desaturated blue: hsl(236, 21%, 26%)
-- Very dark blue: hsl(235, 16%, 14%)
-- Very dark (mostly black) blue: hsl(234, 17%, 12%)
+- White: hsl(0, 0%, 100%) - text
+- Dark desaturated blue: hsl(236, 21%, 26%) - card
+- Very dark blue: hsl(235, 16%, 14%) - gradient background top
+- Very dark blue: hsl(234, 17%, 12%)
 
 ## Typography
 
