@@ -4,10 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css">
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
+  <!-- flip plugin -->
+  <link href="./flip/flip.min.css" rel="stylesheet">
+  <link href="./flip/filp-style.css" rel="stylesheet">
+  <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
@@ -18,22 +21,25 @@
 
   <article id="main-box">
     <h1>We're launching soon</h1>
-    <section id="timer">
-      <div>
-        <div id="timer-days" class="counter"></div>
-        <p>Days</p>
-      </div>
-      <div>
-        <div id="timer-hours" class="counter"></div>
-        <p>Hours</p>
-      </div>
-      <div>
-        <div id="timer-minutes" class="counter"></div>
-        <p>Minutes</p>
-      </div>
-      <div>
-        <div id="timer-seconds" class="counter"></div>
-        <p>Seconds</p>
+    <section>
+      <div class="tick" data-did-init="handleTickInit">
+
+        <div data-repeat="true" data-layout="horizontal fit" data-transform="preset(d, h, m, s) -> delay">
+
+          <div class="tick-group">
+
+            <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+
+              <span data-view="flip"></span>
+
+            </div>
+
+            <span data-key="label" data-view="text" class="tick-label"></span>
+
+          </div>
+
+        </div>
+
       </div>
     </section>
   </article>
@@ -47,6 +53,8 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
+
+  <script src="./flip/flip.min.js"></script>
 </body>
 
 </html>
