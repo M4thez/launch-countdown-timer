@@ -1,29 +1,18 @@
-const countdownTo = 1009600000; // time in miliseconds to countdown to (around 12 days)
-const countdownDate = new Date().getTime() + countdownTo;
+function handleTickInit(tick) {
+  
+  // format of due date is ISO8601
+  // https://en.wikipedia.org/wiki/ISO_8601
+  
+  // '2018-01-31T12:00:00'        to count down to the 31st of January 2018 at 12 o'clock
+  // '2019'                       to count down to 2019
+  // '2018-01-15T10:00:00+01:00'  to count down to the 15th of January 2018 at 10 o'clock in timezone GMT+1
+  
+  // create the countdown counter
+  const countDownDate = new Date().getFullYear() + 1;
+  const counter = Tick.count.down(countDownDate.toString());
 
-// Update the count down every 1 second
-const x = setInterval(function() {
-  // Get today's date and time
-  const now = new Date().getTime();
+  counter.onupdate = function(value) {
+    tick.value = value;
+  };
 
-  // Find the distance between now and the countdown date
-  const distance = countdownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result
-  document.getElementById("timer-seconds").innerHTML = seconds;
-  document.getElementById("timer-minutes").innerHTML = minutes;
-  document.getElementById("timer-hours").innerHTML = hours;
-  document.getElementById("timer-days").innerHTML = days;
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("timer").innerHTML = "LAUNCHED!";
-  }
-}, 1000);
+}
