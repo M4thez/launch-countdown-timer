@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: 'Red Hat Text', sans-serif;
+  font-family: "Red Hat Text", sans-serif;
   font-size: 14px;
 }
 
@@ -12,7 +12,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   color: hsl(237, 18%, 59%);
-  background-image: url('./images/pattern-hills.svg'), url('./images/bg-stars.svg'), linear-gradient(#1e1e28, #241e2c);
+  background-image: url("./images/pattern-hills.svg"),
+    url("./images/bg-stars.svg"), linear-gradient(#1e1e28, #241e2c);
   background-position: bottom, top;
   background-size: contain;
   background-repeat: no-repeat;
@@ -33,10 +34,6 @@ h1 {
   padding-bottom: 3rem;
 }
 
-.tick-credits {
-  display: none;
-}
-
 footer {
   text-align: center;
   padding: 2rem;
@@ -52,5 +49,6 @@ footer a img {
   padding: 2rem 1.2rem;
 }
 footer a img:hover {
-  filter: brightness(0) saturate(100%) invert(55%) sepia(54%) saturate(2555%) hue-rotate(310deg) brightness(100%) contrast(98%);
+  filter: brightness(0) saturate(100%) invert(55%) sepia(54%) saturate(2555%)
+    hue-rotate(310deg) brightness(100%) contrast(98%);
 }

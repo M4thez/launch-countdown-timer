@@ -1,52 +1,62 @@
-
 .tick {
-  font-size:1rem; white-space:nowrap;
+  font-size: 1rem;
+  white-space: nowrap;
 }
 
-.tick-flip,.tick-text-inline {
-  font-size:2.5em;
+.tick-flip,
+.tick-text-inline {
+  font-size: 2.5em;
 }
 
 .tick-label {
-  margin-top:1em;font-size:2rem;text-transform: uppercase;letter-spacing: 6px;
+  margin-top: 1em;
+  text-transform: uppercase;
+  letter-spacing: 6px;
 }
 
 .tick-char {
-  width:1.5em;
+  width: 1.5em;
 }
 
 .tick-text-inline {
-  display:inline-block;text-align:center;min-width:1em;
+  display: inline-block;
+  text-align: center;
+  min-width: 1em;
 }
 
-.tick-text-inline+.tick-text-inline {
-  margin-left:-.325em;
+.tick-text-inline + .tick-text-inline {
+  margin-left: -0.325em;
 }
 
 .tick-group {
-  margin:0 .5em;text-align:center;
+  margin: 0 0.5em;
+  text-align: center;
 }
 
 .tick-text-inline {
-   color: rgb(156, 163, 173) !important; 
+  color: rgb(156, 163, 173) !important;
 }
 
 .tick-label {
-   color: rgb(156, 163, 173) !important; 
+  color: rgb(156, 163, 173) !important;
 }
 
 .tick-flip-panel {
-   color: rgb(255, 112, 134) !important; 
+  color: rgb(255, 112, 134) !important;
 }
 
 .tick-flip-panel-text-wrapper {
-   line-height: 1.45 !important; 
+  line-height: 1.45 !important;
 }
 
 .tick-flip-panel {
-   background-color: rgb(21, 36, 61) !important; 
+  background-color: rgb(21, 36, 61) !important;
 }
 
 .tick-flip {
-   border-radius:0.28em !important; 
+  border-radius: 0.28em !important;
+}
+
+.tick-credits {
+  display: none;
 }
