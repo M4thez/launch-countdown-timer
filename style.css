@@ -24,6 +24,9 @@ body {
   flex: 1;
   padding: 5rem;
 }
+#flip-clock {
+  padding: 0 10rem;
+}
 
 h1 {
   color: white;
@@ -51,4 +54,14 @@ footer a img {
 footer a img:hover {
   filter: brightness(0) saturate(100%) invert(55%) sepia(54%) saturate(2555%)
     hue-rotate(310deg) brightness(100%) contrast(98%);
+}
+@media screen and (max-width: 900px) {
+  #flip-clock {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 660px) {
+  #main-box {
+    padding: 5rem 0rem;
+  }
 }
